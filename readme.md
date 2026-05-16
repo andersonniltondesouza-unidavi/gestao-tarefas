@@ -1,6 +1,6 @@
 # Sistema de Gestão de Tarefas
 
-Este é um projeto fullstack de uma aplicação web para Gestão de Tarefas (To-Do List) desenvolvido em Node.js (Express) com banco de dados PostgreSQL. Toda a infraestrutura da aplicação foi containerizada utilizando Docker e orquestrada via Docker Compose, garantindo isolamento, portabilidade, segurança e facilidade de deploy.
+Este é um projeto fullstack de uma aplicação web para Gestão de Tarefas desenvolvido em Node.js com banco de dados PostgreSQL. Toda a infraestrutura da aplicação foi containerizada utilizando Docker e orquestrada via Docker Compose, garantindo isolamento, portabilidade, segurança e facilidade de deploy.
 
 ## Critérios de Desenvolvimento
 
@@ -59,7 +59,7 @@ Assim que o Docker Compose finalizar a inicialização e o *healthcheck* der o s
 
 ---
 
-## 🐳 Imagem Pública no Docker Hub
+## Imagem Pública no Docker Hub
 
 A imagem oficial desta aplicação foi devidamente empacotada, versionada e distribuída publicamente. Ela pode ser baixada e executada diretamente em qualquer ambiente Docker sem a necessidade de clonar o código-fonte original.
 
