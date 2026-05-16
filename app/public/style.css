@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #34495e;
+    font-size: 1.2rem;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.btn-cancelar {
+    background: #95a5a6;
+}
+
+.btn-cancelar:hover {
+    background: #7f8c8d;
+}
+
+.tarefa-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #7f8c8d;
+}
+
+.tarefa-item.status-em-andamento {
+    border-left-color: #f39c12;
+}
+
+.tarefa-item.status-concluido {
+    border-left-color: #2ecc71;
+}
+
+.tarefa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status-badge {
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge-pendente {
+    background: #7f8c8d;
+}
+
+.badge-em-andamento {
+    background: #f39c12;
+}
+
+.badge-concluido {
+    background: #2ecc71;
+}
+
+.tarefa-desc {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.tarefa-acoes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-acao {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-andamento { background-color: #e67e22; }
+.btn-andamento:hover { background-color: #d35400; }
+
+.btn-concluido { background-color: #27ae60; }
+.btn-concluido:hover { background-color: #219a52; }
+
+.btn-editar { background-color: #3498db; }
+.btn-editar:hover { background-color: #2980b9; }
+
+.btn-remover { background-color: #e74c3c; }
+.btn-remover:hover { background-color: #c0392b; }

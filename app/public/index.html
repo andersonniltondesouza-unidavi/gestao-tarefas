@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestão de Tarefas e Projetos</h1>
+        
+        <div class="card">
+            <h2 id="formTitulo">Nova Tarefa</h2>
+            <form id="formTarefa">
+                <input type="hidden" id="tarefaId">
+                <div class="form-group">
+                    <label for="titulo">Título da Tarefa</label>
+                    <input type="text" id="titulo" placeholder="Ex: Configurar Docker" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" rows="3" placeholder="Ex: Criar o Dockerfile e o docker-compose.yml"></textarea>
+                </div>
+                
+                <div class="form-acoes">
+                    <button type="submit" id="btnSalvar" class="btn">Cadastrar Tarefa</button>
+                    <button type="button" id="btnCancelar" class="btn btn-cancelar" style="display: none;">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Lista de Tarefas</h2>
+            <div id="listaTarefas"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
