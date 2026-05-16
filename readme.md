@@ -2,17 +2,17 @@
 
 Este é um projeto fullstack de uma aplicação web para Gestão de Tarefas (To-Do List) desenvolvido em Node.js (Express) com banco de dados PostgreSQL. Toda a infraestrutura da aplicação foi containerizada utilizando Docker e orquestrada via Docker Compose, garantindo isolamento, portabilidade, segurança e facilidade de deploy.
 
-## 🎯 Critérios de Avaliação Atendidos
+## Critérios de Desenvolvimento
 
 O projeto foi estruturado seguindo rigorosamente as boas práticas de DevOps e os critérios técnicos de containerização:
 
-* **Dockerfile Customizado (na Raiz):** Construção de uma imagem otimizada baseada em `node:18-alpine` para o backend, lidando corretamente com o contexto de pastas ao buscar o `package.json` dentro da subpasta `app/`.
+* **Dockerfile Customizado:** Construção de uma imagem otimizada baseada em `node:18-alpine` para o backend, lidando corretamente com o contexto de pastas ao buscar o `package.json` dentro da subpasta `app/`.
 * **Orquestração Multicontainer:** Utilização do `docker-compose.yml` para gerenciar, provisionar e levantar de forma integrada o serviço web (Node.js) e o serviço de banco de dados (PostgreSQL).
 * **Isolamento de Redes (Bridge):** Implementação da rede customizada `rede-tarefas`, isolando a comunicação interna dos containers do ambiente externo. A API se conecta ao banco de dados utilizando o hostname do serviço (`PostgreSQL`) através do sistema interno de resolução de DNS do Docker.
 * **Persistência de Dados (Volumes):** Configuração de um volume nomeado (`pgdata`) mapeado para o diretório oficial do PostgreSQL (`/var/lib/postgresql/data`), garantindo a integridade e persistência das tarefas mesmo após a destruição ou reinicialização dos containers.
 * **Segurança via Variáveis de Ambiente:** Centralização de credenciais sensíveis (usuário, senha e nome do banco) em um arquivo externo `.env`, injetadas dinamicamente nos containers sem exposição no código-fonte.
-* **Sincronização Avançada (Healthcheck):** Implementação de uma checagem de saúde (`healthcheck`) com `pg_isready` no banco de dados. O serviço da aplicação possui a condição `service_healthy`, impedindo que a API Node.js inicie antes que o PostgreSQL esteja 100% pronto para aceitar conexões, eliminando erros de conexão na inicialização.
-* **Distribuição via Registro Público (Docker Hub):** Build, tagueamento de versão (`v1.0`) e envio da imagem customizada para o Docker Hub, permitindo a distribuição pública da aplicação.
+* **Healthcheck:** Implementação de uma checagem de saúde (`healthcheck`) com `pg_isready` no banco de dados. O serviço da aplicação possui a condição `service_healthy`, impedindo que a API Node.js inicie antes que o PostgreSQL esteja 100% pronto para aceitar conexões, eliminando erros de conexão na inicialização.
+* **Distribuição via Docker Hub:** Build, tagueamento de versão (`v1.0`) e envio da imagem customizada para o Docker Hub, permitindo a distribuição pública da aplicação.
 
 ---
 
